@@ -1,7 +1,7 @@
 from LMSTools import LMSServer
 from LMSTools import LMSTags as tags
 from time import sleep
-#import smbus
+import smbus
 import time
 import sys, getopt
 
@@ -9,8 +9,8 @@ myLCD = None
 lcd_w = None
 
 
-class LCD:
-    """Pseudo LCD Class for printing on screen"""
+class LCDLCD:
+    """Pseudo LCD Class for printingon console, not on the LCD"""
     def __init__(self, lcd_address, lcd_width):
 		# Define some device parameters
        
@@ -99,7 +99,7 @@ class LCD:
 
 
 
-class LCDLCD:
+class LCD:
     """LCD Class build from the work of Math Hawkins"""
     def __init__(self, lcd_address, lcd_width):
 		# Define some device parameters
@@ -180,17 +180,17 @@ class LCDLCD:
     def lcd_string(self, message, line):
         # Send string to display
         message = message.ljust(self.LCD_WIDTH," ")
-        # if line == 1:
-        #     self.lcd_byte(self.LCD_LINE_1, self.LCD_CMD)
-        # elif line == 2:
-        #     self.lcd_byte(self.LCD_LINE_2, self.LCD_CMD)
-        # elif line == 3:
-        #     self.lcd_byte(self.LCD_LINE_3, self.LCD_CMD)
-        # elif line == 4:
-        #     self.lcd_byte(self.LCD_LINE_4, self.LCD_CMD)    
-        # for i in range(self.LCD_WIDTH):
-        #     self.lcd_byte(ord(message[i]),self.LCD_CHR)
-        print(str(line) + " - " + message)
+        if line == 1:
+            self.lcd_byte(self.LCD_LINE_1, self.LCD_CMD)
+        elif line == 2:
+            self.lcd_byte(self.LCD_LINE_2, self.LCD_CMD)
+        elif line == 3:
+            self.lcd_byte(self.LCD_LINE_3, self.LCD_CMD)
+        elif line == 4:
+            self.lcd_byte(self.LCD_LINE_4, self.LCD_CMD)    
+        for i in range(self.LCD_WIDTH):
+            self.lcd_byte(ord(message[i]),self.LCD_CHR)
+        #print(str(line) + " - " + message)
 
 
 
