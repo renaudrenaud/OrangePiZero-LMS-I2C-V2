@@ -17,8 +17,8 @@ then add the line at the bottom of the file
 @reboot python /home/sources/lcdv2/lms_lcd.py -s 192.168.1.140 -c
 
 Please note
--s <ipserver> to indicate the LMS server IP Adress (something like 192.168.1.140
--p <ipPlayer> to indicate the IP of the player. If no parameter, shows the current player info
--w <lcd_width> default is 20 for 20x4. Use -w 16 to indicate 16x2 LCD
--l <lcd_address> indicated by i2cdetect https://www.sites.google.com/site/orangepizero/logitech-media-server/lcd-i2c
--c for clock mode to always have the time information on the screen
+- -s <ipserver> to indicate the LMS server IP Adress (something like 192.168.1.140
+- -p <ipPlayer> to indicate the IP of the player. If no parameter, shows the current player info
+- -w <lcd_width> default is 20 for 20x4. Use -w 16 to indicate 16x2 LCD
+- -l <lcd_address> indicated by i2cdetect https://www.sites.google.com/site/orangepizero/logitech-media-server/lcd-i2c
+- -c for clock mode to always have the time information on the screen
