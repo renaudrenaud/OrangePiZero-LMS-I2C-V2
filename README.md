@@ -21,4 +21,4 @@ Please note
 - -p <ipPlayer> to indicate the IP of the player. If no parameter, shows the current player info
 - -w <lcd_width> default is 20 for 20x4. Use -w 16 to indicate 16x2 LCD
 - -l <lcd_address> indicated by i2cdetect https://www.sites.google.com/site/orangepizero/logitech-media-server/lcd-i2c
-- -c for clock mode to always have the time information on the screen
+- -c for clock mode to always have the time information on the screen. Please note this one does not work on the 16x2
